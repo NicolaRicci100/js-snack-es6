@@ -12,7 +12,7 @@ for (let i = 0; i < guests.length; i++){
     const guest = {
         name: guests[i],
         table: 'VIP table',
-        seat: i + 1
+        seat: 'Seat number ' +  (i + 1)
     };
     guestPlaceholders.push(guest);
 }
