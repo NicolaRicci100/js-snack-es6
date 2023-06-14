@@ -41,15 +41,15 @@ const bikes = [
         weight: 6.4
     },
 ];
-console.table(bikes);
+// console.table(bikes);
 
 //array del peso delle bici
 const bikesWeight = bikes.map(bike => bike.weight);
-console.log(bikesWeight);
+// console.log(bikesWeight);
 
 //peso della bici più leggera
 const lightBikeWeight = Math.min(...bikesWeight);
-console.log(lightBikeWeight);
+// console.log(lightBikeWeight);
 
 //array con solo la bici più leggera
 const lightBike = bikes.filter((bike) => {

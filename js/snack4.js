@@ -12,6 +12,7 @@ console.log('JS OK');
 // Atalanta.
 // Fiorentina.
 
+// array iniziale squadre di calcio
 const footballTeams = [
     {
         name: 'Juventus',
@@ -53,4 +54,26 @@ const footballTeams = [
         points: 0,
         foul: 0
     },
-]
+];
+// console.table(footballTeams);
+
+//funzione random
+function getRandom (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+};
+
+//nuovo array con punti e falli generati casualmente
+footballTeams.forEach((team) => {
+    team.points = getRandom(1, 50);
+    team.foul = getRandom(1, 3);
+});
+// console.table(footballTeams);
+
+//array finale con solo nomi e falli
+const teams = footballTeams.map((team) => {
+    return {
+      name: team.name,
+      foul: team.foul,
+    }
+});
+console.table(teams); //stampo nel log l'array finale
